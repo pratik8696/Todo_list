@@ -17,13 +17,13 @@ let work_items = ['get food', 'eat food'];
 
 app.get('/', function(req, res) {
   // here we have to use the () to activate the function and this is used so that the app.js can decide when to use that function............
-  let dates=date.getDay();
+  let dates=date.Day();
 
   res.render('list', {
     todays_date: dates,
     newitem: items
   });
-  
+
 });
 
 app.post('/', function(req, res) {
