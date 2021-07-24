@@ -1,31 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Todo_list</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <div class="box" id="heading">
+<%- include("header") -%>
+
+  <div class="box" id="heading">
     <h1><%= todays_date %></h1>
-    </div>
-
-    <div class="box">
-
-    <%  for(var i=0;i<newitem.length;i++){ %>
-      <div class="item">
-        <input type="checkbox"/>
+  </div>
+  <div class="box">
+    <%  for(var i=0;i<newitem.length;i++){  %>
+    <div class="item">
+      <input type="checkbox" />
       <p> <%= newitem[i] %> </p>
     </div>
-    <% } %>
-
-
-    <form  action="/" method="post">
+    <%  }  %>
+    <form action="/" method="post">
       <input type="text" name="newitem_here" placeholder="New Item Here" autocomplete="off">
-      <button type="submit" name="button">+</button>
+      <button type="submit" name="list" value="<%= todays_date %>">+</button>
     </form>
+  </div>
 
-    </div>
-    <footer>Made by Pratik😎</footer>
-  </body>
-</html>
+<%- include("footer") -%>
