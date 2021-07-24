@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // global variables Here
-let items = ['Pratik', 'Mihir'];
+let items = ['Get some sleep', 'Complete Homework'];
 let work_items = ['get food', 'eat food'];
 
 
